@@ -25,6 +25,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ~/testcd
+            git pull
             yarn
             yarn build
             ./node_modules/.bin/typeorm migration:run
