@@ -26,6 +26,8 @@ jobs:
           script: |
             cd ~/testcd
             git pull
+            ${{ secrets.GIT_USER }}
+            ${{ secrets.GIT_PASSWORD }}
             yarn
             yarn build
             ./node_modules/.bin/typeorm migration:run
