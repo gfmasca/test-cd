@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(routes);
 
 app.get('/teste', (req: Request, res: Response) => {
-  res.json({ message: 'Hello World Teste de CD13' });
+  res.json({ message: 'Isso é um teste' });
 });
 
 app.use((err: Error, request: Request, response: Response, _: NextFunction) => {
